@@ -6,24 +6,31 @@ import sys
 
 def validarEmail(email):
     return email[-8:] == '@puc.com'
+# verifica se os ultimos 8 caracteres sao '@puc.com
 
 def temMaiuscula(senha):
     for letra in senha:
         if 'A' <= letra <= 'Z': #letra.isupper()
             return True
     return False    
+#verifica se existe uma letra maiuscula na senha, checando todos os caracteres
+# e vendo se algum deles está entre o A maiúsculo e o Z maiúsculo
 
 def temMinuscula(senha):
     for letra in senha:
         if 'a' <= letra <= 'z': #letra.islower()
             return True
     return False        
+#verifica se existe uma letra minuscula na senha, checando todos os caracteres
+# e vendo se algum deles está entre o a minúsculo e o z minúsculo
 
 def temNumero(senha):
     for caractere in senha:
         if '0' <= caractere <= '9': 
             return True
     return False        
+#verifica se existe um numero na senha, checando todos os caracteres
+# e vendo se algum deles está entre 0 e 9.
 
 def validaSenha(senha):
     check_tamanho = len(senha) >= 8
